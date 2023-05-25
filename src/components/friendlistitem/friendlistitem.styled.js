@@ -1,5 +1,4 @@
-import styled from "@emotion/styled";
-import { getQueriesForElement } from "@testing-library/react";
+import styled from '@emotion/styled';
 
 export const FriendItem = styled.li`
   display: flex;
@@ -21,10 +20,10 @@ export const FriendStatus = styled.span`
   margin-top: auto;
   margin-bottom: auto;
   margin-left: 15px;
-  background-color: ${(props) => {
+  background-color: ${props => {
     if (props.isOnline) {
-      return "green";
-    } else return "red";
+      return 'green';
+    } else return 'red';
   }};
 `;
 
