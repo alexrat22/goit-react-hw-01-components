@@ -5,14 +5,14 @@ import {
   StatisticsItem,
   StatisticsLabel,
   StatisticsPercentage,
-} from "./statistics.styled";
+} from './statistics.styled';
 
 function Statistics({ title, stats }) {
   return (
     <StatisticsSection>
-      <StatisticsTitle>{title}</StatisticsTitle>
+      {title && <StatisticsTitle> {title}</StatisticsTitle>}
       <StatisticsStatList>
-        {stats.map((item) => (
+        {stats.map(item => (
           <StatisticsItem key={item.id}>
             <StatisticsLabel>{item.label}</StatisticsLabel>
             <StatisticsPercentage>{item.percentage}%</StatisticsPercentage>
