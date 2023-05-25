@@ -12,7 +12,7 @@ import {
   ProfileStatsQuantity,
 } from './profile.styled';
 
-function Profile({ username, tag, location, avatar, stats }) {
+export default function Profile({ username, tag, location, avatar, stats }) {
   return (
     <ProfileContainer>
       <UserInfoContainer>
@@ -47,5 +47,3 @@ Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
 };
-
-export default Profile;

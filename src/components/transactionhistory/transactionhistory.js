@@ -1,12 +1,12 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 import {
   TransactionTable,
   TableItemList,
   TableHeadItem,
   TableItem,
-} from "./transactionhistory.styled";
+} from './transactionhistory.styled';
 
-function TransactionHistory({ items }) {
+export default function TransactionHistory({ items }) {
   return (
     <TransactionTable>
       <thead>
@@ -18,7 +18,7 @@ function TransactionHistory({ items }) {
       </thead>
 
       <tbody>
-        {items.map((transaction) => (
+        {items.map(transaction => (
           <TableItemList key={transaction.id}>
             <TableItem>{transaction.type}</TableItem>
             <TableItem>{transaction.amount}</TableItem>
@@ -31,7 +31,12 @@ function TransactionHistory({ items }) {
 }
 
 TransactionHistory.propTypes = {
-  items: PropTypes.array.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+    })
+  ),
 };
-
-export default TransactionHistory;

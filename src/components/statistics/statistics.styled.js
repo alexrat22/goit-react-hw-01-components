@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import getRandomHexColor from "../../randomcolor";
+import styled from '@emotion/styled';
+import getRandomHexColor from '../../randomcolor';
 
 export const StatisticsSection = styled.section`
   width: 500px;
@@ -19,7 +19,7 @@ export const StatisticsTitle = styled.h2`
   color: rgb(150, 150, 150);
 `;
 
-export const StatisticsStatList = styled.ul`
+export const StatisticsList = styled.ul`
   margin-top: 20px;
   display: flex;
 `;
