@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import {
   ProfileContainer,
   UserInfoContainer,
@@ -9,7 +10,7 @@ import {
   ProfileStatsItem,
   ProfileStatsLabel,
   ProfileStatsQuantity,
-} from "./profile.styled";
+} from './profile.styled';
 
 function Profile({ username, tag, location, avatar, stats }) {
   return (
@@ -38,5 +39,13 @@ function Profile({ username, tag, location, avatar, stats }) {
     </ProfileContainer>
   );
 }
+
+Profile.propTypes = {
+  username: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string.isRequired,
+  stats: PropTypes.object.isRequired,
+};
 
 export default Profile;

@@ -1,5 +1,3 @@
-//import '../index.css';
-import PropTypes from 'prop-types';
 import Profile from './profile/profile';
 import Statistics from './statistics/statistics';
 import FriendList from './friendlist/friendlist';
@@ -9,7 +7,7 @@ import statisticData from '../JSON/data.json';
 import friends from '../JSON/friends.json';
 import transactions from '../JSON/transactions.json';
 
-function App() {
+export default function App() {
   return (
     <>
       <Profile
@@ -26,18 +24,3 @@ function App() {
     </>
   );
 }
-
-Profile.propTypes = {
-  username: PropTypes.string.isRequired,
-  tag: PropTypes.string.isRequired,
-  location: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
-  stats: PropTypes.object.isRequired,
-};
-
-Statistics.propTypes = {
-  title: PropTypes.string,
-  stats: PropTypes.array.isRequired,
-};
-
-export default App;
