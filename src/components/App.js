@@ -1,4 +1,4 @@
-import '../index.css';
+//import '../index.css';
 import PropTypes from 'prop-types';
 import Profile from './profile/profile';
 import Statistics from './statistics/statistics';
